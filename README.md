@@ -4,79 +4,103 @@ Create a RESTful API application to distribute seats for different federal state
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+Go to your web directory and type:
 ```
-Give the example
+git clone https://github.com/djnikola/seats-distribution.git
 ```
 
-And repeat
-
+then go into seats-distribution/ folder:
 ```
-until finished
+cd seats-distribution/
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+then run:
+```
+composer install
+```
+
+then create a database:
+```
+php bin/console doctrine:database:create
+```
+
+and update database schema:
+```
+php bin/console doctrine:schema:update --force
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+After installing in project root directory run this command:
+```
+php bin/console server:run
+```
 
-### Break down into end to end tests
+Now application is ready to use.
 
-Explain what these tests test and why
+
+## Running the tests
+
+Functional test you can run via Postman.
+
+API documentation is available via Postman.
+
+<div class="postman-run-button"
+data-postman-action="collection/import"
+data-postman-var-1="de320413b2f1b4fb9731"></div>
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
+
+### And Function tests
+
+Run this command in projects' root folder to run all tests:
+```
+vendor/behat/behat/bin/behat
+```
+
+### And PHP Unit tests
+
+Run this command in projects' root folder to run all tests:
+```
+vendor/phpunit/phpunit/phpunit
+```
 
 ```
 Give an example
 ```
 
-### And coding style tests
+## Documentation 
 
-Explain what these tests test and why
+API documentation is available via Postman.
 
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+<div class="postman-run-button"
+data-postman-action="collection/import"
+data-postman-var-1="de320413b2f1b4fb9731"></div>
+<script type="text/javascript">
+  (function (p,o,s,t,m,a,n) {
+    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
+    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
+      (n = o.createElement("script")),
+      (n.id = s+t), (n.async = 1), (n.src = m), n
+    ));
+  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
+</script>
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Symfony](https://symfony.com/) - The web framework used Symfony 3
 
 ## Authors
 
 * **Nikola Dordevic**
-
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
