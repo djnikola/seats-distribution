@@ -48,8 +48,7 @@ Now application is ready to use.
 Functional test you can run via Postman.
 
 API documentation is available via Postman.
-{::nomarkdown}
-<!--
+<section>
 <div class="postman-run-button"
 data-postman-action="collection/import"
 data-postman-var-1="de320413b2f1b4fb9731"></div>
@@ -62,8 +61,7 @@ data-postman-var-1="de320413b2f1b4fb9731"></div>
     ));
   }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
 </script>
--->
-{:/}
+</section>
 
 ### And Function tests
 
