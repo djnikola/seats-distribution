@@ -52,7 +52,7 @@ API documentation is available via Postman.
 <div class="postman-run-button"
 data-postman-action="collection/import"
 data-postman-var-1="de320413b2f1b4fb9731"></div>
-<script type="text/javascript">
+<script\>
 
   (function (p,o,s,t,m,a,n) {
     !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
@@ -62,7 +62,7 @@ data-postman-var-1="de320413b2f1b4fb9731"></div>
     ));
   }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
 
-</script>
+</script\>
 
 
 ### And Function tests
