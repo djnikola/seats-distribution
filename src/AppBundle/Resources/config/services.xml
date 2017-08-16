@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="app_bundle.services.german_states.class">AppBundle\Services\GermanStates</parameter>
+        <parameter key="app_bundle.services.party_handler.class">AppBundle\Services\PartyHandler</parameter>
+        <parameter key="app_bundle.services.distribution_handler.class">AppBundle\Services\DistributionHandler</parameter>
+        <parameter key="app_bundle.entity.party.class">AppBundle\Entity\Party</parameter>
+        <parameter key="app_bundle.services.parliament.class">AppBundle\Services\Parliament</parameter>
+    </parameters>
+    <services>
+        <service id="app_bundle.services.party_handler" class="%app_bundle.services.party_handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%app_bundle.entity.party.class%</argument>
+        </service>
+        <service id="app_bundle.services.german_states" class="%app_bundle.services.german_states.class%">
+        </service>
+        <service id="app_bundle.services.distribution_handler" class="%app_bundle.services.distribution_handler.class%">
+        </service>
+        <service id="app_bundle.services.parliament" class="%app_bundle.services.parliament.class%">
+        </service>
+    </services>
+</container>
